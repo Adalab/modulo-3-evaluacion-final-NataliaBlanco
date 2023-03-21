@@ -5,6 +5,7 @@ const dataApi = () => {
       const rightData = data.map((character) => {
         return {
           id: character.id,
+          image: character.image,
           name: character.name,
           species: character.species,
           gender: character.gender,

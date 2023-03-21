@@ -1,10 +1,9 @@
 import '../styles/App.scss';
-
 import { useState, useEffect } from 'react';
 import dataApi from './service/Data';
 import filter from './filter/Filter';
-import characterList from './characters/CharacterList';
-import characterCard from './characters/CharacterCard';
+import CharacterList from './characters/CharacterList';
+
 // - Imágenes
 
 /* SECCIÓN DEL COMPONENTE */
@@ -36,6 +35,7 @@ function App() {
           <option></option>
         </select>
       </form>
+      <CharacterList data={data} />
     </div>
   );
 }
