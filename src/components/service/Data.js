@@ -1,5 +1,5 @@
-const dataApi = () => {
-  return fetch('https://hp-api.onrender.com/api/characters/house/gryffindor')
+const dataApi = (value) => {
+  return fetch(`https://hp-api.onrender.com/api/characters/house/${value}`)
     .then((response) => response.json())
     .then((data) => {
       const rightData = data.map((character) => {

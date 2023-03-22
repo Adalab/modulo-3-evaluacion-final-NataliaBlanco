@@ -1,6 +1,6 @@
-const CharacterCard = ({ eachCharacter }) => {
+const CharacterCard = ({ eachCharacter, idx }) => {
   return (
-    <li className="profile_card">
+    <li className="profile_card" key={idx}>
       <a href=".">
         <img
           className="img_card"

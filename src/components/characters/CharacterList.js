@@ -1,7 +1,7 @@
 import CharacterCard from './CharacterCard';
 
-const CharacterList = ({ data }) => {
-  const detail = data.map((eachCharacter) => {
+const CharacterList = ({ filteredChar }) => {
+  const detail = filteredChar.map((eachCharacter) => {
     return <CharacterCard eachCharacter={eachCharacter} />;
   });
 
