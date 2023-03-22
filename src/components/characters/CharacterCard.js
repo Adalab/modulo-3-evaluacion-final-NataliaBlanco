@@ -1,18 +1,17 @@
 import { Link } from 'react-router-dom';
 
-const CharacterCard = ({ eachCharacter, idx }) => {
+const CharacterCard = ({ eachCharacter }) => {
   return (
     <Link to={`/character/${eachCharacter.id}`}>
-      <li className="profile_card" key={idx}>
+      <li className="profile_card" key={eachCharacter.id}>
         <img
-          className="img_card"
+          className="profile_card_img"
           src={eachCharacter.image}
           alt={eachCharacter.name}
-          title=""
         ></img>
-        <p>{eachCharacter.name}</p>
-        <p>{eachCharacter.species}</p>
-        <p>{eachCharacter.gender}</p>
+        <p className="profile_card_text">{eachCharacter.name}</p>
+        <p className="profile_card_text">{eachCharacter.species}</p>
+        <p className="profile_card_text">{eachCharacter.gender}</p>
       </li>
     </Link>
   );

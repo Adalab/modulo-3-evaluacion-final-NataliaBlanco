@@ -57,7 +57,7 @@ function App() {
 
   /* HTML */
   return (
-    <div className="App">
+    <div className="app">
       <Header />
       <Routes>
         <Route

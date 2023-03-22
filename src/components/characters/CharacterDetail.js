@@ -4,17 +4,20 @@ const CharacterDetail = ({ characterFind }) => {
   return (
     <div className="detail_card">
       <Link to="/">
-        <button clasName="button">Back</button>
+        <button className="button">Back</button>
       </Link>
       <img
-        className="img_card"
+        className="detail_card_img"
         src={characterFind.image}
         alt={characterFind.name}
         title=""
+        height="260"
       ></img>
-      <p>{characterFind.name}</p>
-      <p>Status:{characterFind.alive === true ? 'alive' : 'dead'}</p>
-      <p>Gender:{characterFind.gender}</p>
+      <p className="detail_card_name">{characterFind.name}</p>
+      <p className="detail_card_status">
+        Status:{characterFind.alive === true ? 'alive' : 'dead'}
+      </p>
+      <p className="detail_card_gender">Gender:{characterFind.gender}</p>
     </div>
   );
 };

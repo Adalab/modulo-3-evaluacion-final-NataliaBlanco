@@ -1,10 +1,68 @@
 /* Aquí van tus estilos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
 .body {
   background-color: grey;
-  .header {
-    background-image: url('../components/images/harry-potter-logo-transparent-background-19.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 30vh;
+  .app {
+    .header {
+      background-image: url('../components/images/harry-potter-logo-transparent-background-19.png');
+      background-size: 500px;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 200px;
+    }
+    .form {
+      display: grid;
+      grid-template-columns: 200px 300px;
+      justify-content: center;
+
+      &_label {
+        color: white;
+        font-size: 2rem;
+        padding: 10px 10px;
+      }
+      &_s {
+        font-size: 2rem;
+        font-weight: 400;
+        color: black;
+        margin: 5px 5px;
+        border: solid goldenrod;
+        background-color: lightgray;
+      }
+    }
+    .list {
+      display: flex;
+      justify-content: center;
+
+      .profile {
+        padding: 6rem;
+        display: flex;
+        flex-flow: row wrap;
+        height: 60vh;
+
+        &_card {
+          padding: 10px;
+          font-size: 2rem;
+          display: flex;
+          flex-direction: column;
+          border: solid goldenrod;
+          text-decoration: none;
+          &_img {
+            height: 260px;
+            width: 195px;
+          }
+          &_text {
+            color: goldenrod;
+          }
+        }
+      }
+    }
   }
 }

@@ -4,19 +4,19 @@ const Filter = ({ searchN, handleInput, selectH, handleSelect, data }) => {
     handleInput(ev.target.value);
   };
   return (
-    <form>
-      <label className="header__label">Filtrar por Nombre</label>
+    <form className="form">
+      <label className="form_label">Filtrar por Nombre</label>
       <input
-        className=""
-        autoComplete="off"
+        className="form_s"
         type="search"
         name="search"
         placeholder="Filtrar por Nombres"
         value={searchN}
         onChange={handle2}
       />
-      <label className="header__label">Filtrar por Casa</label>
+      <label className="form_label">Filtrar por Casa</label>
       <select
+        className="form_s"
         name="select"
         onChange={(ev) => {
           handleSelect(ev.target.value);
