@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "./static/css/main.5d62b805.css",
+    "main.js": "./static/js/main.bb5eed85.js",
+    "static/media/castle.jpg": "./static/media/castle.d83642c2dfe5bf3cdb2e.jpg",
+    "static/media/harry-potter-logo-transparent-background-19.png": "./static/media/harry-potter-logo-transparent-background-19.0c8617712e557e0be3b8.png",
+    "index.html": "./index.html",
+    "main.5d62b805.css.map": "./static/css/main.5d62b805.css.map",
+    "main.bb5eed85.js.map": "./static/js/main.bb5eed85.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d62b805.css",
+    "static/js/main.bb5eed85.js"
+  ]
+}
