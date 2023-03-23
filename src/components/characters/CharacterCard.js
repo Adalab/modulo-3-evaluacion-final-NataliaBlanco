@@ -3,7 +3,7 @@ import img from '../images/castle.jpg';
 
 const CharacterCard = ({ eachCharacter }) => {
   return (
-    <Link to={`/character/${eachCharacter.id}`}>
+    <Link to={`/character/${eachCharacter.id}`} className="link">
       <li className="profile_card" key={eachCharacter.id}>
         <img
           className="profile_card_img"

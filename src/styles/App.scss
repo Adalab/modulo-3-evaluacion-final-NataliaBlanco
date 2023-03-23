@@ -13,11 +13,7 @@
   .app {
     color: white;
     font-size: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: bottom;
+
     .header {
       background-image: url('../components/images/harry-potter-logo-transparent-background-19.png');
       background-size: 300px;
@@ -73,19 +69,19 @@
     .list {
       display: flex;
       justify-content: center;
-
+      .link {
+        text-decoration: none;
+      }
       .profile {
         padding: 6rem;
         display: flex;
         flex-flow: row wrap;
-        height: 60vh;
-        text-decoration: none;
 
         &_card {
+          width: 200px;
           margin: 0.5rem;
           padding: 10px;
           font-size: 2rem;
-
           display: flex;
           flex-direction: column;
           border: solid goldenrod;
@@ -103,22 +99,46 @@
         }
       }
     }
+    .detail {
+      align-items: end;
+      position: absolute;
+
+      &_button {
+        margin: 1rem;
+        background-color: white;
+        font-size: 1rem;
+        border-radius: 4rem;
+        width: 5.5rem;
+        position: relative;
+        left: 29rem;
+        @media all and (min-width: 760px) {
+          margin: rem;
+          font-size: 1.5rem;
+          border-radius: 4rem;
+          width: 8rem;
+          text-align: center;
+          justify-content: center;
+          position: relative;
+          left: 39rem;
+        }
+      }
+    }
     .detail_card {
       font-family: 'Almendra SC', serif;
       width: 330px;
       height: 240px;
-      margin: 8rem 2rem;
+      margin: 0 3rem;
       padding: 10px;
       font-size: 1.5rem;
       display: grid;
       grid-template-columns: 120px 60px;
       grid-template-rows: 35px 15px 15px 15px;
       row-gap: 0.3rem;
-      justify-content: auto;
-      align-items: auto;
+      justify-content: right;
+      align-items: right;
       grid-template-areas:
         'pic . n'
-        'pic . a'
+        'pic . a '
         'pic . g'
         'pic . s'
         'pic . h';
@@ -127,17 +147,17 @@
       text-decoration: none;
       background-color: #330000;
       @media all and (min-width: 760px) {
-        margin: 8rem 4rem;
+        margin: 1rem 4rem;
         padding: 10px;
-        width: 445px;
+        width: 460px;
         height: 300px;
         font-size: 2rem;
-        grid-template-columns: 90px 110px;
-        grid-template-rows: 50px 20px 20px 20px;
+        grid-template-columns: 100px 9 0px;
+        grid-template-rows: 30px 20px 20px 20px;
         row-gap: 0.5rem;
-        justify-content: center;
+        justify-content: start;
         align-items: start;
-        text-align: right;
+        text-align: end;
       }
 
       &_img {
@@ -149,24 +169,10 @@
         @media all and (min-width: 760px) {
           height: 230px;
           width: 180px;
+          padding-right: 2rem;
         }
       }
-      &_button {
-        background-color: white;
-        font-size: 1rem;
-        position: relative;
-        left: 125px;
-        top: -40px;
-        border-radius: 4rem;
-        width: 5.5rem;
-        @media all and (min-width: 760px) {
-          font-size: 1.5rem;
-          position: relative;
-          left: 210px;
-          border-radius: 4rem;
-          width: 8rem;
-        }
-      }
+
       &_n {
         color: white;
         grid-area: n;
@@ -180,7 +186,13 @@
         color: white;
         grid-area: a;
         font-family: 'Almendra SC', serif;
+        &_heart {
+          font-size: 2rem;
+          margin: 0 2px;
+          grid-area: h;
+        }
       }
+
       &_g {
         color: white;
         grid-area: g;
