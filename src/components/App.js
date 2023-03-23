@@ -6,6 +6,7 @@ import Filter from './form/Filter';
 import CharacterList from './characters/CharacterList';
 import Header from './Header';
 import CharacterDetail from './characters/CharacterDetail';
+import img from './images/castle.jpg';
 
 // - Imágenes
 
@@ -76,7 +77,7 @@ function App() {
         ></Route>
         <Route
           path="/character/:id"
-          element={<CharacterDetail characterFind={characterFind} />}
+          element={<CharacterDetail characterFind={characterFind} img={img} />}
         ></Route>
       </Routes>
     </div>

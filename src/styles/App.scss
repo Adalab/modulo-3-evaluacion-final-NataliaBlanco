@@ -13,28 +13,53 @@
   .app {
     .header {
       background-image: url('../components/images/harry-potter-logo-transparent-background-19.png');
-      background-size: 500px;
+      background-size: 300px;
       background-position: center;
       background-repeat: no-repeat;
       height: 200px;
+      @media all and (min-width: 760px) {
+        background-size: 500px;
+      }
     }
     .form {
       display: grid;
-      grid-template-columns: 200px 300px;
+      grid-template-columns: 140px 165px;
       justify-content: center;
-
+      align-items: center;
+      @media all and (min-width: 760px) {
+        display: grid;
+        grid-template-columns: 200px 300px;
+        justify-content: center;
+        align-items: left;
+      }
       &_label {
         color: white;
-        font-size: 2rem;
-        padding: 10px 10px;
+        font-size: 1.5rem;
+        padding: 5px 5px;
+        text-align: center;
+        align-items: end;
+        @media all and (min-width: 760px) {
+          color: white;
+          font-size: 2rem;
+          padding: 10px 10px;
+          text-align: left;
+        }
       }
       &_s {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 400;
+        text-align: center;
+
         color: black;
-        margin: 5px 5px;
+        margin: 6px;
         border: solid goldenrod;
         background-color: lightgray;
+      }
+      @media all and (min-width: 760px) {
+        font-size: 1rem;
+        font-weight: normal;
+        margin: 5px;
+        text-align: center;
       }
     }
     .list {
@@ -46,22 +71,122 @@
         display: flex;
         flex-flow: row wrap;
         height: 60vh;
+        text-decoration: none;
 
         &_card {
+          margin: 0.5rem;
           padding: 10px;
           font-size: 2rem;
+
           display: flex;
           flex-direction: column;
           border: solid goldenrod;
           text-decoration: none;
           &_img {
-            height: 260px;
-            width: 195px;
+            height: 190px;
+            width: 150px;
           }
           &_text {
-            color: goldenrod;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-family: 'Almendra SC', serif;
           }
         }
+      }
+    }
+    .detail_card {
+      font-family: 'Almendra SC', serif;
+      width: 330px;
+      height: 240px;
+      margin: 8rem 2rem;
+      padding: 10px;
+      font-size: 1.5rem;
+      display: grid;
+      grid-template-columns: 120px 60px;
+      grid-template-rows: 35px 15px 15px 15px;
+      row-gap: 0.3rem;
+      justify-content: auto;
+      align-items: auto;
+      grid-template-areas:
+        'pic . n'
+        'pic . a'
+        'pic . g'
+        'pic . s'
+        'pic . h';
+
+      border: solid goldenrod;
+      text-decoration: none;
+      background-color: #330000;
+      @media all and (min-width: 760px) {
+        margin: 8rem 4rem;
+        padding: 10px;
+        width: 450px;
+        height: 300px;
+        font-size: 2rem;
+        grid-template-columns: 90px 110px;
+        grid-template-rows: 40px 20px 20px 20px;
+        row-gap: 0.5rem;
+        justify-content: start;
+        align-items: start;
+      }
+
+      &_img {
+        height: 190px;
+        width: 150px;
+        grid-area: pic;
+        position: relative;
+        top: 20px;
+        @media all and (min-width: 760px) {
+          height: 230px;
+          width: 180px;
+        }
+      }
+      &_button {
+        background-color: white;
+        font-size: 1rem;
+        position: relative;
+        left: 125px;
+        top: -40px;
+        border-radius: 4rem;
+        width: 5.5rem;
+        @media all and (min-width: 760px) {
+          font-size: 1.5rem;
+          position: relative;
+          left: 265px;
+          top: -50px;
+          border-radius: 4rem;
+          width: 8rem;
+        }
+      }
+      &_n {
+        color: white;
+        grid-area: n;
+        font-size: 1.5rem;
+        font-family: 'Almendra SC', serif;
+        @media all and (min-width: 760px) {
+          font-size: 2.5rem;
+        }
+      }
+      &_a {
+        color: white;
+        grid-area: a;
+        font-family: 'Almendra SC', serif;
+      }
+      &_g {
+        color: white;
+        grid-area: g;
+        font-family: 'Almendra SC', serif;
+      }
+      &_s {
+        color: white;
+        grid-area: s;
+        font-family: 'Almendra SC', serif;
+      }
+      &_h {
+        color: white;
+        grid-area: h;
+        font-family: 'Almendra SC', serif;
       }
     }
   }

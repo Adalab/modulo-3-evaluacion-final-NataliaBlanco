@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import '../images/castle.jpg';
 
 const CharacterCard = ({ eachCharacter }) => {
   return (
@@ -7,7 +8,7 @@ const CharacterCard = ({ eachCharacter }) => {
         <img
           className="profile_card_img"
           src={eachCharacter.image}
-          alt={eachCharacter.name}
+          alt="../images/castle.jpg"
         ></img>
         <p className="profile_card_text">{eachCharacter.name}</p>
         <p className="profile_card_text">{eachCharacter.species}</p>

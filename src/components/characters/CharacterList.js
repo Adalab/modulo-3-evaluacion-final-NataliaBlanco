@@ -1,6 +1,6 @@
 import CharacterCard from './CharacterCard';
 
-const CharacterList = ({ filteredChar }) => {
+const CharacterList = ({ filteredChar, img }) => {
   const detail = filteredChar.map((eachCharacter) => {
     return <CharacterCard eachCharacter={eachCharacter} />;
   });
