@@ -11,6 +11,13 @@
 .body {
   background-color: grey;
   .app {
+    color: white;
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: bottom;
     .header {
       background-image: url('../components/images/harry-potter-logo-transparent-background-19.png');
       background-size: 300px;
@@ -26,6 +33,7 @@
       grid-template-columns: 140px 165px;
       justify-content: center;
       align-items: center;
+
       @media all and (min-width: 760px) {
         display: grid;
         grid-template-columns: 200px 300px;
@@ -121,14 +129,15 @@
       @media all and (min-width: 760px) {
         margin: 8rem 4rem;
         padding: 10px;
-        width: 450px;
+        width: 445px;
         height: 300px;
         font-size: 2rem;
         grid-template-columns: 90px 110px;
-        grid-template-rows: 40px 20px 20px 20px;
+        grid-template-rows: 50px 20px 20px 20px;
         row-gap: 0.5rem;
-        justify-content: start;
+        justify-content: center;
         align-items: start;
+        text-align: right;
       }
 
       &_img {
@@ -153,8 +162,7 @@
         @media all and (min-width: 760px) {
           font-size: 1.5rem;
           position: relative;
-          left: 265px;
-          top: -50px;
+          left: 210px;
           border-radius: 4rem;
           width: 8rem;
         }

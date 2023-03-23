@@ -6,7 +6,6 @@ import Filter from './form/Filter';
 import CharacterList from './characters/CharacterList';
 import Header from './Header';
 import CharacterDetail from './characters/CharacterDetail';
-import img from './images/castle.jpg';
 
 // - Imágenes
 
@@ -15,6 +14,7 @@ function App() {
   const [data, setData] = useState([]);
   const [searchN, setsSearchN] = useState('');
   const [selectH, setSelectH] = useState('gryffindor');
+  const [message, setMessage] = useState({});
 
   /* EFECTOS (código cuando carga la página) */
   useEffect(() => {
@@ -70,6 +70,8 @@ function App() {
                 handleInput={handleInput}
                 selectH={selectH}
                 handleSelect={handleSelect}
+                message={message}
+                setMessage={setMessage}
               />
               <CharacterList filteredChar={filteredChar()} />
             </>
@@ -77,7 +79,7 @@ function App() {
         ></Route>
         <Route
           path="/character/:id"
-          element={<CharacterDetail characterFind={characterFind} img={img} />}
+          element={<CharacterDetail characterFind={characterFind} />}
         ></Route>
       </Routes>
     </div>

@@ -1,20 +1,21 @@
-const Filter = ({ searchN, handleInput, selectH, handleSelect, data }) => {
+const Filter = ({ searchN, handleInput, selectH, handleSelect }) => {
   const handle2 = (ev) => {
     ev.preventDefault();
-    handleInput(ev.target.value);
+    const inputValue = ev.target.value;
+    handleInput(inputValue);
   };
   return (
     <form className="form">
-      <label className="form_label">Filtrar por Nombre</label>
+      <label className="form_label">Filter by Name</label>
       <input
         className="form_s"
         type="search"
         name="search"
-        placeholder="Filtrar por Nombres"
+        placeholder="Filter by Name"
         value={searchN}
         onChange={handle2}
       />
-      <label className="form_label">Filtrar por Casa</label>
+      <label className="form_label">Filter by House</label>
       <select
         className="form_s"
         name="select"
