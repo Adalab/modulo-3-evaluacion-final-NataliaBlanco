@@ -7,101 +7,109 @@
 
 :root {
   font-size: 62.5%;
-}
-.body {
   background-color: grey;
-  .app {
-    color: white;
-    font-size: 2.5rem;
+}
+.app {
+  color: white;
+  font-size: 2.5rem;
+  background-color: grey;
 
-    .header {
-      background-image: url('../components/images/harry-potter-logo-transparent-background-19.png');
-      background-size: 300px;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 200px;
-      @media all and (min-width: 760px) {
-        background-size: 500px;
-      }
+  .header {
+    background-image: url('../components/images/harry-potter-logo-transparent-background-19.png');
+    background-size: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    @media all and (min-width: 760px) {
+      background-size: 500px;
     }
-    .form {
+  }
+  .form {
+    display: grid;
+    grid-template-columns: 140px 165px;
+    justify-content: center;
+    align-items: center;
+
+    @media all and (min-width: 760px) {
       display: grid;
-      grid-template-columns: 140px 165px;
+      grid-template-columns: 200px 300px;
       justify-content: center;
-      align-items: center;
-
+      align-items: left;
+    }
+    &_label {
+      color: white;
+      font-size: 1.5rem;
+      padding: 5px 5px;
+      text-align: center;
+      align-items: end;
       @media all and (min-width: 760px) {
-        display: grid;
-        grid-template-columns: 200px 300px;
-        justify-content: center;
-        align-items: left;
-      }
-      &_label {
         color: white;
-        font-size: 1.5rem;
-        padding: 5px 5px;
-        text-align: center;
-        align-items: end;
-        @media all and (min-width: 760px) {
-          color: white;
-          font-size: 2rem;
-          padding: 10px 10px;
-          text-align: left;
-        }
-      }
-      &_s {
-        font-size: 1.5rem;
-        font-weight: 400;
-        text-align: center;
-
-        color: black;
-        margin: 6px;
-        border: solid goldenrod;
-        background-color: lightgray;
-      }
-      @media all and (min-width: 760px) {
-        font-size: 1rem;
-        font-weight: normal;
-        margin: 5px;
-        text-align: center;
+        font-size: 2rem;
+        padding: 10px 10px;
+        text-align: left;
       }
     }
-    .list {
+    &_s {
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-align: center;
+
+      color: black;
+      margin: 6px;
+      border: solid goldenrod;
+      background-color: lightgray;
+    }
+    @media all and (min-width: 760px) {
+      font-size: 1rem;
+      font-weight: normal;
+      margin: 5px;
+      text-align: center;
+    }
+  }
+  .list {
+    display: flex;
+    justify-content: center;
+    .link {
+      text-decoration: none;
+    }
+    .profile {
+      padding: 6rem;
       display: flex;
-      justify-content: center;
-      .link {
-        text-decoration: none;
-      }
-      .profile {
-        padding: 6rem;
-        display: flex;
-        flex-flow: row wrap;
+      flex-flow: row wrap;
 
-        &_card {
-          width: 200px;
-          margin: 0.5rem;
-          padding: 10px;
-          font-size: 2rem;
-          display: flex;
-          flex-direction: column;
-          border: solid goldenrod;
+      &_card {
+        width: 200px;
+        height: 310px;
+        margin: 0.5rem;
+        padding: 10px;
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        border: solid goldenrod;
+        text-decoration: none;
+        &_img {
+          height: 190px;
+          width: 150px;
+        }
+        &_text {
+          color: black;
           text-decoration: none;
-          &_img {
-            height: 190px;
-            width: 150px;
-          }
-          &_text {
-            color: black;
-            text-decoration: none;
-            text-align: center;
-            font-family: 'Almendra SC', serif;
-          }
+          text-align: center;
+          font-family: 'Almendra SC', serif;
         }
       }
     }
+  }
+  .body-detail {
+    background-color: grey;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .detail {
       align-items: end;
       position: absolute;
+      background-color: grey;
 
       &_button {
         margin: 1rem;
@@ -131,17 +139,9 @@
       padding: 10px;
       font-size: 1.5rem;
       display: grid;
-      grid-template-columns: 120px 60px;
-      grid-template-rows: 35px 15px 15px 15px;
-      row-gap: 0.3rem;
-      justify-content: right;
-      align-items: right;
-      grid-template-areas:
-        'pic . n'
-        'pic . a '
-        'pic . g'
-        'pic . s'
-        'pic . h';
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      align-content: center;
 
       border: solid goldenrod;
       text-decoration: none;
@@ -152,19 +152,12 @@
         width: 460px;
         height: 300px;
         font-size: 2rem;
-        grid-template-columns: 100px 9 0px;
-        grid-template-rows: 30px 20px 20px 20px;
-        row-gap: 0.5rem;
-        justify-content: start;
-        align-items: start;
-        text-align: end;
       }
 
       &_img {
         height: 190px;
-        width: 150px;
-        grid-area: pic;
-        position: relative;
+        width: 125px;
+
         top: 20px;
         @media all and (min-width: 760px) {
           height: 230px;
@@ -172,41 +165,36 @@
           padding-right: 2rem;
         }
       }
+      .detail_card_section {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
 
-      &_n {
-        color: white;
-        grid-area: n;
-        font-size: 1.5rem;
-        font-family: 'Almendra SC', serif;
-        @media all and (min-width: 760px) {
-          font-size: 2.5rem;
+        &_n {
+          color: white;
+          word-spacing: 1rem;
+          font-size: 1.8rem;
+          font-family: 'Almendra SC', serif;
+          @media all and (min-width: 760px) {
+            font-size: 2.8rem;
+          }
         }
-      }
-      &_a {
-        color: white;
-        grid-area: a;
-        font-family: 'Almendra SC', serif;
-        &_heart {
-          font-size: 2rem;
-          margin: 0 2px;
-          grid-area: h;
+        &_a {
+          color: white;
+          word-spacing: 1rem;
+          font-family: 'Almendra SC', serif;
+          &_heart {
+            font-size: 2rem;
+            margin: 0 2px;
+          }
         }
-      }
 
-      &_g {
-        color: white;
-        grid-area: g;
-        font-family: 'Almendra SC', serif;
-      }
-      &_s {
-        color: white;
-        grid-area: s;
-        font-family: 'Almendra SC', serif;
-      }
-      &_h {
-        color: white;
-        grid-area: h;
-        font-family: 'Almendra SC', serif;
+        &_p {
+          color: white;
+          word-spacing: 1rem;
+          font-family: 'Almendra SC', serif;
+        }
       }
     }
   }
