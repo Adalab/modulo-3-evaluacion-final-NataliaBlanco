@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.48bab6ca.css",
-    "main.js": "./static/js/main.1efb9d4f.js",
+    "main.css": "./static/css/main.c66d1656.css",
+    "main.js": "./static/js/main.fc52233f.js",
     "static/media/castle.jpg": "./static/media/castle.d83642c2dfe5bf3cdb2e.jpg",
     "static/media/harry-potter-logo-transparent-background-19.png": "./static/media/harry-potter-logo-transparent-background-19.0c8617712e557e0be3b8.png",
     "index.html": "./index.html",
-    "main.48bab6ca.css.map": "./static/css/main.48bab6ca.css.map",
-    "main.1efb9d4f.js.map": "./static/js/main.1efb9d4f.js.map"
+    "main.c66d1656.css.map": "./static/css/main.c66d1656.css.map",
+    "main.fc52233f.js.map": "./static/js/main.fc52233f.js.map"
   },
   "entrypoints": [
-    "static/css/main.48bab6ca.css",
-    "static/js/main.1efb9d4f.js"
+    "static/css/main.c66d1656.css",
+    "static/js/main.fc52233f.js"
   ]
 }
